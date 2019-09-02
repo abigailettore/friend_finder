@@ -1,12 +1,12 @@
-var friends = require("../data/friends.js");
+var friends = require("../data/friends");
 
 module.exports = function(app) {
   // Return all friends found in friends.js as JSON
-  app.get("/api/friends.js", function(req, res) {
+  app.get("/data/friends", function(req, res) {
     res.json(friends);
   });
 
-  app.post("/api/friends.js", function(req, res) {
+  app.post("/data/friends", function(req, res) {
     console.log(req.body.scores);
 
     // Receive user details (name, photo, scores)
